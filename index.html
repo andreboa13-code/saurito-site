@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Saurito — um bichinho que cresce com os teus passos</title>
+<meta name="description" content="O Saurito nasce de um ovo e cresce com os teus passos reais. Sem contas, sem anúncios, sem ranking. Em breve." />
+<meta property="og:title" content="Saurito" />
+<meta property="og:description" content="Um bichinho que nasce de um ovo e cresce com os teus passos. Em breve." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://saurito.com/" />
+<meta property="og:image" content="https://saurito.com/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Saurito, um bichinho verde que cresce com os teus passos" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://saurito.com/og.png" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Saurito",
+  "url": "https://saurito.com/",
+  "logo": "https://saurito.com/og.png",
+  "sameAs": [
+    "https://www.instagram.com/saurito.app",
+    "https://www.tiktok.com/@saurito.app",
+    "https://x.com/sauritoapp"
+  ]
+}
+</script>
+<style>
+  :root {
+    --parede: #DDF0D9; --chao: #E8E5DE; --rodape: #DF6F3B;
+    --texto: #1E2A1E; --suave: #4A5A4A; --destaque: #3F8F3A; --borda: #C9D6C4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; color: var(--texto); background: var(--parede);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 40px 20px 0; text-align: center; }
+  h1 { font-size: 2.6rem; margin: 0 0 8px; letter-spacing: -0.02em; }
+  .sub { font-size: 1.2rem; color: var(--suave); margin: 0 auto 8px; max-width: 30em; }
+  .bicho { width: min(260px, 70vw); margin: 24px auto 0; }
+  .cena { background: var(--chao); border-top: 14px solid var(--rodape); margin-top: -6px; padding: 40px 20px 56px; }
+  .cena-in { max-width: 640px; margin: 0 auto; text-align: center; }
+  ul.pontos { list-style: none; padding: 0; margin: 0 0 36px; display: grid; gap: 14px; text-align: left; }
+  ul.pontos li { background: #fff; border: 1px solid var(--borda); border-radius: 16px; padding: 14px 18px; }
+  ul.pontos b { display: block; margin-bottom: 2px; }
+  h2 { font-size: 1.4rem; margin: 0 0 6px; }
+  form { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 16px; }
+  input[type=email] {
+    flex: 1 1 240px; min-width: 0; padding: 14px 16px; font-size: 1rem;
+    border: 1px solid var(--borda); border-radius: 12px; background: #fff; color: var(--texto);
+  }
+  button {
+    padding: 14px 22px; font-size: 1rem; font-weight: 700; color: #fff; background: var(--destaque);
+    border: 0; border-radius: 12px; cursor: pointer;
+  }
+  button:disabled { opacity: .6; cursor: default; }
+  input:focus-visible, button:focus-visible, a:focus-visible { outline: 3px solid #1E2A1E; outline-offset: 2px; }
+  .hp { position: absolute; left: -9999px; }
+  #msg { min-height: 1.5em; margin: 12px 0 0; font-weight: 600; }
+  #msg.erro { color: #B3261E; }
+  .peq { font-size: .85rem; color: var(--suave); margin-top: 10px; }
+  .redes { padding: 24px 20px 4px; text-align: center; background: var(--chao); }
+  .redes h2 { font-size: .85rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--suave); margin: 0 0 6px; }
+  .redes ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 6px; justify-content: center; }
+  .redes a {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 44px; height: 44px; border-radius: 50%; color: var(--suave);
+    text-decoration: none; transition: color .15s, background-color .15s;
+  }
+  .redes a:hover { color: var(--destaque); background: #fff; }
+  .redes svg { width: 24px; height: 24px; }
+  footer { text-align: center; padding: 20px; font-size: .9rem; color: var(--suave); background: var(--chao); }
+  a { color: var(--destaque); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Saurito</h1>
+  <p class="sub">Um bichinho que nasce de um ovo e cresce com os teus passos reais.</p>
+  <div class="bicho"><svg role="img" aria-label="O Saurito, um lagarto verde" style="width:100%;height:auto;display:block" viewBox="0 0 220 240"><defs><linearGradient id="ecoCorpo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C7E393"></stop><stop offset="1" stop-color="#7AAE47"></stop></linearGradient></defs><ellipse cx="110" cy="216" rx="34.2" ry="7" fill="rgba(20,20,10,0.16)"></ellipse><path d="M 135,165 L 215,155 L 145,195 Z" fill="#557a32" stroke="rgba(0,0,0,0.12)" stroke-width="1.5"></path><path d="M 86,182 L 80,212" stroke="#7AAE47" stroke-width="22" stroke-linecap="round"></path><path d="M 134,182 L 140,212" stroke="#7AAE47" stroke-width="22" stroke-linecap="round"></path><ellipse cx="74" cy="215" rx="12" ry="6.5" fill="#7AAE47"></ellipse><ellipse cx="146" cy="215" rx="12" ry="6.5" fill="#7AAE47"></ellipse><circle cx="66" cy="213" r="2.6" fill="#7AAE47"></circle><circle cx="70" cy="217.5" r="2.6" fill="#7AAE47"></circle><circle cx="76" cy="218.5" r="2.6" fill="#7AAE47"></circle><circle cx="154" cy="213" r="2.6" fill="#7AAE47"></circle><circle cx="150" cy="217.5" r="2.6" fill="#7AAE47"></circle><circle cx="144" cy="218.5" r="2.6" fill="#7AAE47"></circle><path d="M 78,118 L 68,172" stroke="#7AAE47" stroke-width="17" stroke-linecap="round"></path><path d="M 142,118 L 152,172" stroke="#7AAE47" stroke-width="17" stroke-linecap="round"></path><circle cx="67" cy="177" r="8.5" fill="#7AAE47"></circle><circle cx="153" cy="177" r="8.5" fill="#7AAE47"></circle><ellipse cx="110" cy="150" rx="38" ry="60" fill="url(#ecoCorpo)" stroke="rgba(0,0,0,0.08)" stroke-width="1.5"></ellipse><ellipse cx="108.5172587506177" cy="169.39814777294134" rx="5.734489011345431" ry="6.543717989214435" rotation="52.62807712890208" originX="108.5172587506177" originY="169.39814777294134" fill="hsl(305, 45%, 38%)" opacity="0.5214437360642478"></ellipse><path d="M 78.0,58.0 C 84.7,52.0 99.3,48.0 110.0,48.0 C 120.7,48.0 135.3,52.0 142.0,58.0 C 148.7,64.0 151.7,75.0 150.0,84.0 C 148.3,93.0 138.7,105.7 132.0,112.0 C 125.3,118.3 117.3,122.0 110.0,122.0 C 102.7,122.0 94.7,118.3 88.0,112.0 C 81.3,105.7 71.7,93.0 70.0,84.0 C 68.3,75.0 71.3,64.0 78.0,58.0 Z" fill="url(#ecoCorpo)" stroke="rgba(0,0,0,0.08)" stroke-width="1.5"></path><path d="M 110,126 Q 117,149 110,172 Q 103,149 110,126 Z" fill="#557a32" stroke="rgba(0,0,0,0.12)" stroke-width="1"></path><circle cx="80" cy="58" r="20" fill="#fff" stroke="rgba(0,0,0,0.08)" stroke-width="1"></circle><circle cx="80" cy="59.6" r="10" fill="#20241f"></circle><circle cx="83.4" cy="56.2" r="3.16" fill="#fff" opacity="0.7"></circle><path d="M 61.05164914827678,51.599999999999994 A 20 20 0 0 1 98.94835085172322,51.599999999999994 Z" fill="url(#ecoCorpo)"></path><circle cx="140" cy="58" r="20" fill="#fff" stroke="rgba(0,0,0,0.08)" stroke-width="1"></circle><circle cx="140" cy="59.6" r="10" fill="#20241f"></circle><circle cx="143.4" cy="56.2" r="3.16" fill="#fff" opacity="0.7"></circle><path d="M 121.05164914827678,51.599999999999994 A 20 20 0 0 1 158.9483508517232,51.599999999999994 Z" fill="url(#ecoCorpo)"></path><circle cx="104" cy="100" r="2.5" fill="rgba(0,0,0,0.4)"></circle><circle cx="116" cy="100" r="2.5" fill="rgba(0,0,0,0.4)"></circle><path d="M 102,110 Q 110,109 118,110" stroke="#3a2f27" stroke-width="2" fill="none" stroke-linecap="round"></path></svg></div>
+</main>
+<div class="cena">
+  <div class="cena-in">
+    <ul class="pontos">
+      <li><b>Tu caminhas, ele cresce</b>Sem metas e sem pressão. Só o teu ritmo de verdade.</li>
+      <li><b>Deixa rastos pelo caminho</b>Recados curtos, deixados nos sítios por onde passas.</li>
+      <li><b>Sem contas, sem anúncios, sem ranking</b>Ninguém compara o teu dia com o de outra pessoa.</li>
+    </ul>
+    <h2>Em breve</h2>
+    <p class="sub">Deixa o teu email e avisamos-te uma única vez, quando o Saurito chegar.</p>
+    <form id="form" novalidate>
+      <label for="email" style="position:absolute;left:-9999px">O teu email</label>
+      <input id="email" type="email" name="email" placeholder="o.teu@email.pt" autocomplete="email" required />
+      <input class="hp" type="text" name="site" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <button id="btn" type="submit">Avisem-me</button>
+    </form>
+    <p id="msg" role="status" aria-live="polite"></p>
+    <p class="peq">Usamos o teu email só para este aviso. <a href="/privacidade/">Privacidade</a></p>
+  </div>
+</div>
+<section class="redes" aria-labelledby="redes-t">
+  <h2 id="redes-t">Segue o Saurito</h2>
+  <ul>
+    <li><a href="https://www.instagram.com/saurito.app" target="_blank" rel="noopener" aria-label="Saurito no Instagram"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+    <li><a href="https://www.tiktok.com/@saurito.app" target="_blank" rel="noopener" aria-label="Saurito no TikTok"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a></li>
+    <li><a href="https://x.com/sauritoapp" target="_blank" rel="noopener" aria-label="Saurito no X"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
+  </ul>
+</section>
+<footer>Feito em Portugal por uma pessoa. &middot; <a href="/privacidade/">Privacidade</a> &middot; <a href="mailto:ola@saurito.com">ola@saurito.com</a></footer>
+<script>
+  // Chave publicavel do Supabase: feita para ir no cliente. A seguranca vem das
+  // regras da tabela (RLS): so permite INSERT, nunca ler nem alterar emails.
+  var URL_API = 'https://iaatdnccjzgxtibimgzm.supabase.co/rest/v1/lista_espera';
+  var CHAVE = 'sb_publishable_gCdPa1T4cdYSAYN-0MdzkQ_I0tM_Y40';
+  var form = document.getElementById('form');
+  var msg = document.getElementById('msg');
+  var btn = document.getElementById('btn');
+  function dizer(t, erro) { msg.textContent = t; msg.className = erro ? 'erro' : ''; }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (form.site.value) return; // campo-armadilha para robos
+    var email = form.email.value.trim().toLowerCase();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email) || email.length > 200) {
+      dizer('Esse email não parece certo. Experimenta outra vez.', true); return;
+    }
+    btn.disabled = true; dizer('A guardar…', false);
+    fetch(URL_API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', apikey: CHAVE, Authorization: 'Bearer ' + CHAVE, Prefer: 'return=minimal' },
+      body: JSON.stringify({ email: email })
+    }).then(function (r) {
+      if (r.ok || r.status === 409) { form.reset(); dizer(r.ok ? 'Feito! Avisamos-te quando chegar. 🦎' : 'Já estás na lista. 🦎', false); }
+      else { dizer('Não deu para guardar agora. Tenta daqui a um bocado.', true); }
+    }).catch(function () {
+      dizer('Sem ligação. Tenta daqui a um bocado.', true);
+    }).then(function () { btn.disabled = false; });
+  });
+</script>
+</body>
+</html>
