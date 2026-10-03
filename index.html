@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="canonical" href="https://saurito.com/" />
 <title>Saurito — um bichinho que cresce com os teus passos</title>
 <meta name="description" content="O Saurito nasce de um ovo e cresce com os teus passos reais. Sem contas, sem anúncios, sem ranking. Em breve." />
 <meta property="og:title" content="Saurito" />
@@ -75,6 +76,12 @@
   }
   .redes a:hover { color: var(--destaque); background: #fff; }
   .redes svg { width: 24px; height: 24px; }
+  body { overflow-x: hidden; }
+  .unico-t { font-size: 1.4rem; margin: 0 0 6px; }
+  .unico-s { color: var(--suave); margin: 0 0 18px; }
+  .unico { margin: 0 0 36px; width: 100vw; position: relative; left: 50%; margin-left: -50vw; background: #265164; }
+  .unico img { display: block; width: 100%; max-width: 1400px; height: auto; margin: 0 auto; }
+  @media (max-width: 640px) { .unico img { height: 330px; object-fit: cover; object-position: 50% 75%; } }
   footer { text-align: center; padding: 20px; font-size: .9rem; color: var(--suave); background: var(--chao); }
   a { color: var(--destaque); }
 </style>
@@ -92,6 +99,12 @@
       <li><b>Deixa rastos pelo caminho</b>Recados curtos, deixados nos sítios por onde passas.</li>
       <li><b>Sem contas, sem anúncios, sem ranking</b>Ninguém compara o teu dia com o de outra pessoa.</li>
     </ul>
+    <h2 class="unico-t">Cada Saurito é único</h2>
+    <p class="unico-s">Cabelo, óculos, roupa e cenário: o teu cresce do teu jeito.</p>
+    <figure class="unico">
+      <img src="/img/multidao.webp" width="1920" height="855" loading="lazy"
+           alt="Dezenas de Sauritos, lagartos de cores diferentes, com chapéus, óculos, casacos, vestidos e fatos, todos de pé numa planície azul." />
+    </figure>
     <h2>Em breve</h2>
     <p class="sub">Deixa o teu email e avisamos-te uma única vez, quando o Saurito chegar.</p>
     <form id="form" novalidate>
