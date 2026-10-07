@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="robots" content="noindex" />
+<link rel="canonical" href="https://saurito.com/testar/" />
+<title>Testar o Saurito no Android</title>
+<meta name="description" content="Ajuda a testar o Saurito no Android: três passos e 14 dias com a app instalada." />
+<meta property="og:title" content="Testa o Saurito no Android" />
+<meta property="og:description" content="Procuro 12 pessoas para testar o Saurito antes de ir para a Play Store. Três passos, um minuto." />
+<meta property="og:image" content="https://saurito.com/og.png" />
+<style>
+  :root {
+    --parede: #DDF0D9; --chao: #E8E5DE; --rodape: #DF6F3B;
+    --texto: #1E2A1E; --suave: #4A5A4A; --destaque: #3F8F3A; --borda: #C9D6C4;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; color: var(--texto); background: var(--parede);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55; overflow-x: hidden;
+  }
+  main { max-width: 640px; margin: 0 auto; padding: 40px 20px 28px; }
+  h1 { font-size: 2.2rem; margin: 0 0 8px; letter-spacing: -0.02em; text-align: center; }
+  .sub { font-size: 1.15rem; color: var(--suave); margin: 0 auto 8px; max-width: 30em; text-align: center; }
+  .cena { background: var(--chao); border-top: 14px solid var(--rodape); padding: 36px 20px 48px; }
+  .cena-in { max-width: 640px; margin: 0 auto; }
+  ol.passos { list-style: none; padding: 0; margin: 0 0 28px; display: grid; gap: 14px; counter-reset: p; }
+  ol.passos li {
+    background: #fff; border: 1px solid var(--borda); border-radius: 16px;
+    padding: 16px 18px 16px 62px; position: relative; counter-increment: p;
+  }
+  ol.passos li::before {
+    content: counter(p); position: absolute; left: 16px; top: 16px; width: 32px; height: 32px;
+    border-radius: 50%; background: var(--destaque); color: #fff; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+  }
+  ol.passos b { display: block; margin-bottom: 4px; }
+  .btn {
+    display: inline-block; margin-top: 10px; padding: 12px 20px; font-weight: 700; color: #fff;
+    background: var(--destaque); border-radius: 12px; text-decoration: none;
+  }
+  a:focus-visible { outline: 3px solid #1E2A1E; outline-offset: 2px; }
+  h2 { font-size: 1.25rem; margin: 0 0 6px; }
+  .aviso { background: #fff; border: 1px solid var(--borda); border-left: 6px solid var(--rodape); border-radius: 12px; padding: 14px 18px; margin: 0 0 28px; }
+  .aviso p { margin: 0 0 6px; }
+  .aviso p:last-child { margin: 0; }
+  .peq { font-size: .88rem; color: var(--suave); }
+  a { color: var(--destaque); }
+  footer { text-align: center; padding: 20px; font-size: .9rem; color: var(--suave); background: var(--chao); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Testa o Saurito</h1>
+  <p class="sub">Um bichinho que nasce de um ovo e cresce com os teus passos reais. Procuro 12 pessoas com Android para o testarem antes de ir para a Play Store.</p>
+</main>
+<div class="cena">
+  <div class="cena-in">
+    <div class="aviso">
+      <p><b>O que te peço:</b> instalar a app e <b>mantê-la instalada durante 14 dias</b>. A Google exige isso para eu poder publicar. Não precisas de a usar todos os dias, mas não a desinstales.</p>
+      <p class="peq">Só funciona em Android. Usa a mesma conta Google que tens na Play Store do telemóvel.</p>
+    </div>
+    <ol class="passos">
+      <li>
+        <b>Junta-te ao grupo de testadores</b>
+        Abre o grupo e carrega em «Aderir ao grupo». O grupo serve só para a Google saber quem pode testar. Não envio mensagens por lá.
+        <br /><a class="btn" href="https://groups.google.com/g/testadores-saurito" rel="noopener">Abrir o grupo</a>
+      </li>
+      <li>
+        <b>Torna-te testador</b>
+        Abre este link no telemóvel (ou no computador) e carrega em «Tornar-me testador» (em inglês: «Become a tester»). Se a página aparecer em inglês, é só a Google a seguir o idioma do teu navegador.
+        <br /><a class="btn" href="https://play.google.com/apps/testing/com.andreconnan.passos" rel="noopener">Tornar-me testador</a>
+      </li>
+      <li>
+        <b>Instala o Saurito</b>
+        Na mesma página aparece o botão para instalar pela Play Store. Se ainda não aparecer, espera uns minutos e atualiza a página.
+      </li>
+    </ol>
+    <h2>Se algo correr mal</h2>
+    <p>Diz-me o que viste e o modelo do telemóvel: <a href="mailto:ola@saurito.com">ola@saurito.com</a>. O que mais me ajuda: os passos estarem certos (compara com a tua app de saúde) e a app não fechar sozinha.</p>
+    <p class="peq">A app não tem contas, anúncios nem ranking. <a href="/privacidade/">Privacidade</a></p>
+  </div>
+</div>
+<footer>Feito em Portugal por uma pessoa. &middot; <a href="/">saurito.com</a></footer>
+</body>
+</html>
