@@ -6,10 +6,10 @@
 <link rel="canonical" href="https://saurito.com/" />
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="/icon-512.png" />
-<title>Saurito — um bichinho que cresce com os teus passos</title>
-<meta name="description" content="O Saurito nasce de um ovo e cresce com os teus passos reais. Sem contas, sem anúncios, sem ranking. Em breve." />
+<title>Saurito: um bichinho que cresce com os teus passos</title>
+<meta name="description" content="O Saurito nasce de um ovo e só cresce quando andas. Passos reais, sem contas, sem anúncios e sem ranking. Em teste no Android." />
 <meta property="og:title" content="Saurito" />
-<meta property="og:description" content="Um bichinho que nasce de um ovo e cresce com os teus passos. Em breve." />
+<meta property="og:description" content="Um bichinho que nasce de um ovo e só cresce quando andas." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://saurito.com/" />
 <meta property="og:image" content="https://saurito.com/og.png" />
@@ -32,104 +32,165 @@
   ]
 }
 </script>
+<link rel="preload" href="/fontes/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/estilo.css" />
 <style>
-  :root {
-    --parede: #DDF0D9; --chao: #E8E5DE; --rodape: #DF6F3B;
-    --texto: #1E2A1E; --suave: #4A5A4A; --destaque: #3F8F3A; --borda: #C9D6C4;
+  /* Topo: promessa + botão, com a multidão logo a seguir */
+  .topo { background: var(--parede); text-align: center; padding: 8px 0 0; }
+  .topo h1 { font-size: clamp(2rem, 5.5vw, 3.2rem); font-weight: 900; margin: 28px auto 12px; max-width: 14em; }
+  .topo .sub { font-size: 1.2rem; color: var(--suave); margin: 0 auto 26px; max-width: 32em; }
+  .acoes { display: flex; flex-wrap: wrap; gap: 10px 16px; justify-content: center; align-items: center; }
+  .estado { display: inline-block; margin: 18px 0 0; font-size: .9rem; font-weight: 700; color: var(--suave); }
+  .estado::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--destaque); margin-right: 8px; vertical-align: 2px; }
+  .multidao { margin: 36px 0 0; background: var(--noite); border-top: 10px solid var(--rodape); }
+  .multidao img { display: block; width: 100%; max-width: 1600px; height: auto; margin: 0 auto; }
+  @media (max-width: 640px) { .multidao img { height: 300px; object-fit: cover; object-position: 50% 75%; } }
+
+  /* Secções */
+  section.bloco { padding: 64px 0; }
+  .bloco h2 { font-size: clamp(1.6rem, 3.5vw, 2.1rem); font-weight: 900; text-align: center; margin: 0 0 10px; }
+  .bloco .intro { text-align: center; color: var(--suave); max-width: 34em; margin: 0 auto 36px; }
+
+  /* Como funciona: três passos, o andar é sempre o verbo */
+  .passos { list-style: none; padding: 0; margin: 0; display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); counter-reset: p; }
+  .passos li { background: var(--branco); border: 1px solid var(--borda); border-radius: var(--raio); padding: 24px; counter-increment: p; }
+  .passos li::before {
+    content: counter(p); display: flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px; border-radius: 50%; margin-bottom: 14px;
+    background: var(--parede); color: var(--destaque-escuro); font-weight: 900; font-size: 1.1rem;
   }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; color: var(--texto); background: var(--parede);
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.55;
+  .passos h3 { font-size: 1.2rem; font-weight: 800; margin: 0 0 6px; }
+  .passos p { margin: 0; color: var(--suave); }
+
+
+  /* Capturas reais da app */
+  .jogo { background: var(--branco); }
+    .capturas { list-style: none; padding: 0; margin: 0; display: grid; gap: 22px; grid-template-columns: repeat(3, 1fr); row-gap: 36px; }
+  .capturas figure { margin: 0; text-align: center; }
+  .capturas img { display: block; width: 100%; height: auto; border-radius: 22px; box-shadow: 0 10px 30px rgba(30,42,30,.14); }
+  .capturas figcaption { margin-top: 14px; font-weight: 700; }
+  @media (max-width: 720px) {
+    /* No telemóvel passam a uma fila que se desliza para o lado */
+    .capturas { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 72%; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 20px 12px; margin: 0 -20px; }
+    .capturas li { scroll-snap-align: center; }
   }
-  main { max-width: 640px; margin: 0 auto; padding: 40px 20px 0; text-align: center; }
-  h1 { font-size: 2.6rem; margin: 0 0 8px; letter-spacing: -0.02em; }
-  h1.marca { margin: 0 0 14px; line-height: 0; }
-  h1.marca img { display: block; width: min(440px, 86vw); height: auto; margin: 0 auto; }
-  .sub { font-size: 1.2rem; color: var(--suave); margin: 0 auto 8px; max-width: 30em; }
-  .bicho { width: min(260px, 70vw); margin: 24px auto 0; }
-  .cena { background: var(--chao); border-top: 14px solid var(--rodape); margin-top: -6px; padding: 40px 20px 56px; }
-  .cena-in { max-width: 640px; margin: 0 auto; text-align: center; }
-  ul.pontos { list-style: none; padding: 0; margin: 0 0 36px; display: grid; gap: 14px; text-align: left; }
-  ul.pontos li { background: #fff; border: 1px solid var(--borda); border-radius: 16px; padding: 14px 18px; }
-  ul.pontos b { display: block; margin-bottom: 2px; }
-  h2 { font-size: 1.4rem; margin: 0 0 6px; }
-  form { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 16px; }
-  input[type=email] {
-    flex: 1 1 240px; min-width: 0; padding: 14px 16px; font-size: 1rem;
-    border: 1px solid var(--borda); border-radius: 12px; background: #fff; color: var(--texto);
+
+  /* Promessas: o que o Saurito nunca faz */
+  .promessas { background: var(--parede); }
+  .lista-promessas { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .lista-promessas li { background: rgba(255,255,255,.7); border-radius: var(--raio); padding: 18px 20px; }
+  .lista-promessas b { display: block; font-weight: 800; margin-bottom: 2px; }
+  .lista-promessas span { color: var(--suave); font-size: .97rem; }
+
+  /* Aviso por email, para quem não tem Android ou prefere esperar */
+  .aviso { text-align: center; }
+  .aviso form { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; max-width: 520px; margin: 0 auto; }
+  .aviso input[type=email] {
+    flex: 1 1 240px; min-width: 0; padding: 14px 16px; font: inherit;
+    border: 1px solid var(--borda); border-radius: 14px; background: var(--branco); color: var(--texto);
   }
-  button {
-    padding: 14px 22px; font-size: 1rem; font-weight: 700; color: #fff; background: var(--destaque);
-    border: 0; border-radius: 12px; cursor: pointer;
-  }
-  button:disabled { opacity: .6; cursor: default; }
-  input:focus-visible, button:focus-visible, a:focus-visible { outline: 3px solid #1E2A1E; outline-offset: 2px; }
   .hp { position: absolute; left: -9999px; }
-  #msg { min-height: 1.5em; margin: 12px 0 0; font-weight: 600; }
+  #msg { min-height: 1.6em; margin: 14px 0 0; font-weight: 700; }
   #msg.erro { color: #B3261E; }
-  .peq { font-size: .85rem; color: var(--suave); margin-top: 10px; }
-  .redes { padding: 24px 20px 4px; text-align: center; background: var(--chao); }
-  .redes h2 { font-size: .85rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--suave); margin: 0 0 6px; }
-  .redes ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 6px; justify-content: center; }
-  .redes a {
-    display: inline-flex; align-items: center; justify-content: center;
-    width: 44px; height: 44px; border-radius: 50%; color: var(--suave);
-    text-decoration: none; transition: color .15s, background-color .15s;
-  }
-  .redes a:hover { color: var(--destaque); background: #fff; }
-  .redes svg { width: 24px; height: 24px; }
-  body { overflow-x: hidden; }
-  .unico-t { font-size: 1.4rem; margin: 0 0 6px; }
-  .unico-s { color: var(--suave); margin: 0 0 18px; }
-  .unico { margin: 0 0 36px; width: 100vw; position: relative; left: 50%; margin-left: -50vw; background: #265164; }
-  .unico img { display: block; width: 100%; max-width: 1400px; height: auto; margin: 0 auto; }
-  @media (max-width: 640px) { .unico img { height: 330px; object-fit: cover; object-position: 50% 75%; } }
-  footer { text-align: center; padding: 20px; font-size: .9rem; color: var(--suave); background: var(--chao); }
-  a { color: var(--destaque); }
+  .peq { font-size: .88rem; color: var(--suave); margin-top: 8px; }
 </style>
 </head>
 <body>
-<main>
-  <h1 class="marca"><img src="/img/saurito-logo.svg" width="545" height="146" alt="Saurito" /></h1>
-  <p class="sub">Um bichinho que nasce de um ovo e cresce com os teus passos reais.</p>
-  <div class="bicho"><svg role="img" aria-label="O Saurito, um lagarto verde" style="width:100%;height:auto;display:block" viewBox="0 0 220 240"><defs><linearGradient id="ecoCorpo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C7E393"></stop><stop offset="1" stop-color="#7AAE47"></stop></linearGradient></defs><ellipse cx="110" cy="216" rx="34.2" ry="7" fill="rgba(20,20,10,0.16)"></ellipse><path d="M 135,165 L 215,155 L 145,195 Z" fill="#557a32" stroke="rgba(0,0,0,0.12)" stroke-width="1.5"></path><path d="M 86,182 L 80,212" stroke="#7AAE47" stroke-width="22" stroke-linecap="round"></path><path d="M 134,182 L 140,212" stroke="#7AAE47" stroke-width="22" stroke-linecap="round"></path><ellipse cx="74" cy="215" rx="12" ry="6.5" fill="#7AAE47"></ellipse><ellipse cx="146" cy="215" rx="12" ry="6.5" fill="#7AAE47"></ellipse><circle cx="66" cy="213" r="2.6" fill="#7AAE47"></circle><circle cx="70" cy="217.5" r="2.6" fill="#7AAE47"></circle><circle cx="76" cy="218.5" r="2.6" fill="#7AAE47"></circle><circle cx="154" cy="213" r="2.6" fill="#7AAE47"></circle><circle cx="150" cy="217.5" r="2.6" fill="#7AAE47"></circle><circle cx="144" cy="218.5" r="2.6" fill="#7AAE47"></circle><path d="M 78,118 L 68,172" stroke="#7AAE47" stroke-width="17" stroke-linecap="round"></path><path d="M 142,118 L 152,172" stroke="#7AAE47" stroke-width="17" stroke-linecap="round"></path><circle cx="67" cy="177" r="8.5" fill="#7AAE47"></circle><circle cx="153" cy="177" r="8.5" fill="#7AAE47"></circle><ellipse cx="110" cy="150" rx="38" ry="60" fill="url(#ecoCorpo)" stroke="rgba(0,0,0,0.08)" stroke-width="1.5"></ellipse><ellipse cx="108.5172587506177" cy="169.39814777294134" rx="5.734489011345431" ry="6.543717989214435" rotation="52.62807712890208" originX="108.5172587506177" originY="169.39814777294134" fill="hsl(305, 45%, 38%)" opacity="0.5214437360642478"></ellipse><path d="M 78.0,58.0 C 84.7,52.0 99.3,48.0 110.0,48.0 C 120.7,48.0 135.3,52.0 142.0,58.0 C 148.7,64.0 151.7,75.0 150.0,84.0 C 148.3,93.0 138.7,105.7 132.0,112.0 C 125.3,118.3 117.3,122.0 110.0,122.0 C 102.7,122.0 94.7,118.3 88.0,112.0 C 81.3,105.7 71.7,93.0 70.0,84.0 C 68.3,75.0 71.3,64.0 78.0,58.0 Z" fill="url(#ecoCorpo)" stroke="rgba(0,0,0,0.08)" stroke-width="1.5"></path><path d="M 110,126 Q 117,149 110,172 Q 103,149 110,126 Z" fill="#557a32" stroke="rgba(0,0,0,0.12)" stroke-width="1"></path><circle cx="80" cy="58" r="20" fill="#fff" stroke="rgba(0,0,0,0.08)" stroke-width="1"></circle><circle cx="80" cy="59.6" r="10" fill="#20241f"></circle><circle cx="83.4" cy="56.2" r="3.16" fill="#fff" opacity="0.7"></circle><path d="M 61.05164914827678,51.599999999999994 A 20 20 0 0 1 98.94835085172322,51.599999999999994 Z" fill="url(#ecoCorpo)"></path><circle cx="140" cy="58" r="20" fill="#fff" stroke="rgba(0,0,0,0.08)" stroke-width="1"></circle><circle cx="140" cy="59.6" r="10" fill="#20241f"></circle><circle cx="143.4" cy="56.2" r="3.16" fill="#fff" opacity="0.7"></circle><path d="M 121.05164914827678,51.599999999999994 A 20 20 0 0 1 158.9483508517232,51.599999999999994 Z" fill="url(#ecoCorpo)"></path><circle cx="104" cy="100" r="2.5" fill="rgba(0,0,0,0.4)"></circle><circle cx="116" cy="100" r="2.5" fill="rgba(0,0,0,0.4)"></circle><path d="M 102,110 Q 110,109 118,110" stroke="#3a2f27" stroke-width="2" fill="none" stroke-linecap="round"></path></svg></div>
-</main>
-<div class="cena">
-  <div class="cena-in">
-    <ul class="pontos">
-      <li><b>Tu caminhas, ele cresce</b>Sem metas e sem pressão. Só o teu ritmo de verdade.</li>
-      <li><b>Deixa rastos pelo caminho</b>Recados curtos, deixados nos sítios por onde passas.</li>
-      <li><b>Sem contas, sem anúncios, sem ranking</b>Ninguém compara o teu dia com o de outra pessoa.</li>
-    </ul>
-    <h2 class="unico-t">Cada Saurito é único</h2>
-    <p class="unico-s">Cabelo, óculos, roupa e cenário: o teu cresce do teu jeito.</p>
-    <figure class="unico">
-      <img src="/img/multidao.webp" width="1920" height="855" loading="lazy"
-           alt="Dezenas de Sauritos, lagartos de cores diferentes, com chapéus, óculos, casacos, vestidos e fatos, todos de pé numa planície azul." />
-    </figure>
-    <h2>Em breve</h2>
-    <p class="sub">Deixa o teu email e avisamos-te uma única vez, quando o Saurito chegar.</p>
-    <form id="form" novalidate>
-      <label for="email" style="position:absolute;left:-9999px">O teu email</label>
-      <input id="email" type="email" name="email" placeholder="o.teu@email.pt" autocomplete="email" required />
-      <input class="hp" type="text" name="site" tabindex="-1" autocomplete="off" aria-hidden="true" />
-      <button id="btn" type="submit">Avisem-me</button>
-    </form>
-    <p id="msg" role="status" aria-live="polite"></p>
-    <p class="peq">Usamos o teu email só para este aviso. <a href="/privacidade/">Privacidade</a></p>
+<header class="topo">
+  <div class="barra">
+    <a class="logo" href="/" aria-label="Saurito, página inicial"><img src="/img/saurito-logo.svg" width="545" height="146" alt="Saurito" /></a>
+    <nav><a href="#como-funciona">Como funciona</a></nav>
   </div>
-</div>
-<section class="redes" aria-labelledby="redes-t">
-  <h2 id="redes-t">Segue o Saurito</h2>
-  <ul>
+  <div class="contentor">
+    <h1>Um bichinho que só cresce quando andas</h1>
+    <p class="sub">O Saurito nasce de um ovo e cresce com os teus passos reais. Envelhece contigo, veste o que conquistas e um dia deixa um ovo de herança.</p>
+    <div class="acoes">
+      <a class="btn btn-principal" href="/testar/">Testar no Android</a>
+      <a class="btn btn-secundario" href="#aviso">Avisem-me quando sair</a>
+    </div>
+    <p class="estado">Em teste na Play Store, em Portugal e no Brasil</p>
+  </div>
+  <figure class="multidao">
+    <img src="/img/multidao.webp" width="1920" height="855" fetchpriority="high"
+         alt="Dezenas de Sauritos, lagartos de cores diferentes, com chapéus, óculos, casacos, vestidos e fatos, todos de pé numa planície azul." />
+  </figure>
+</header>
+
+<main>
+  <section class="bloco" id="como-funciona" aria-labelledby="cf-t">
+    <div class="contentor">
+      <h2 id="cf-t">Como funciona</h2>
+      <p class="intro">Não há metas nem pressão. O telemóvel conta os passos que já dás no dia a dia, e o Saurito vive deles.</p>
+      <ol class="passos">
+        <li>
+          <h3>Anda, e o ovo choca</h3>
+          <p>Cada Saurito nasce diferente: raça, cor, crista e pintas saem à sorte. Há raças comuns e raras.</p>
+        </li>
+        <li>
+          <h3>Anda, e ele cresce</h3>
+          <p>De cria a lendário, passa por nove fases e muda de aspeto em cada uma. Nunca cresce por tempo, só com passos.</p>
+        </li>
+        <li>
+          <h3>Anda, e deixa rastos</h3>
+          <p>Escreve um recado curto num sítio por onde passas. Quem passar lá depois encontra-o.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="bloco jogo" aria-labelledby="jg-t">
+    <div class="contentor">
+      <h2 id="jg-t">Uma vida inteira no teu bolso</h2>
+      <p class="intro">Capturas reais da app.</p>
+      <ul class="capturas">
+        <li><figure><img src="/img/app/ovo-ninho.webp" width="640" height="800" loading="lazy" alt="Um ovo rachado num ninho, à noite, a 76% de chocar." /><figcaption>Anda, e o ovo choca</figcaption></figure></li>
+        <li><figure><img src="/img/app/racas.webp" width="640" height="800" loading="lazy" alt="As seis raças de Saurito: Osga, Lagarto-de-água, Dragão-barbudo, Lagartixa e as raras Osga albina e Dragão vermelho." /><figcaption>Seis raças, duas delas raras</figcaption></figure></li>
+        <li><figure><img src="/img/app/cria-noite.webp" width="640" height="799" loading="lazy" alt="Um Saurito azul acabado de nascer, de t-shirt, num caminho à noite, a dizer: Nham. Obrigado, mosca." /><figcaption>Nasce pequeno e com fome</figcaption></figure></li>
+        <li><figure><img src="/img/app/zec-campo.webp" width="640" height="800" loading="lazy" alt="O Zéc, um Saurito vermelho de gorro, óculos azuis, camisola e ténis, num campo com uma árvore e uma casa." /><figcaption>Veste o que conquistas</figcaption></figure></li>
+        <li><figure><img src="/img/app/robert-rio.webp" width="640" height="800" loading="lazy" alt="O Robert, um Saurito amarelo com cabelo encaracolado, óculos de sol e camisola de Portugal, numa praia do Rio de Janeiro." /><figcaption>Escolhe o cenário, do Rio a Lisboa</figcaption></figure></li>
+        <li><figure><img src="/img/app/rua-lojas.webp" width="640" height="800" loading="lazy" alt="A Rua das lojas da app, com quatro marcas: Zigando, Maison Escama, Streettail e Rastopata." /><figcaption>Gasta moscas na Rua das lojas</figcaption></figure></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bloco promessas" aria-labelledby="pr-t">
+    <div class="contentor">
+      <h2 id="pr-t">Feito para ser leve</h2>
+      <p class="intro">Ninguém compara o teu dia com o de outra pessoa.</p>
+      <ul class="lista-promessas">
+        <li><b>Sem contas</b><span>Não pede nome, email nem telefone.</span></li>
+        <li><b>Sem anúncios</b><span>Nada a interromper o teu Saurito.</span></li>
+        <li><b>Sem ranking</b><span>Anda ao teu ritmo, sem competir.</span></li>
+        <li><b>Só passos reais</b><span>Crescimento não se compra nem se finge.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="bloco aviso" id="aviso" aria-labelledby="av-t">
+    <div class="contentor">
+      <h2 id="av-t">Não tens Android, ou preferes esperar?</h2>
+      <p class="intro">Deixa o teu email e avisamos-te uma única vez, quando o Saurito chegar à loja.</p>
+      <form id="form" novalidate>
+        <label for="email" class="so-leitores">O teu email</label>
+        <input id="email" type="email" name="email" placeholder="o.teu@email.pt" autocomplete="email" required />
+        <input class="hp" type="text" name="site" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <button id="btn" class="btn btn-principal" type="submit">Avisem-me</button>
+      </form>
+      <p id="msg" role="status" aria-live="polite"></p>
+      <p class="peq">Usamos o teu email só para este aviso. <a href="/privacidade/">Privacidade</a></p>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <ul class="redes">
     <li><a href="https://www.instagram.com/saurito.app" target="_blank" rel="noopener" aria-label="Saurito no Instagram"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
     <li><a href="https://www.tiktok.com/@saurito.app" target="_blank" rel="noopener" aria-label="Saurito no TikTok"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a></li>
     <li><a href="https://x.com/sauritoapp" target="_blank" rel="noopener" aria-label="Saurito no X"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
   </ul>
-</section>
-<footer>Feito em Portugal por uma pessoa. &middot; <a href="/privacidade/">Privacidade</a> &middot; <a href="mailto:ola@saurito.com">ola@saurito.com</a></footer>
+  <p>Feito em Portugal por uma pessoa.</p>
+  <p><a href="/privacidade/">Privacidade</a> &middot; <a href="mailto:ola@saurito.com">ola@saurito.com</a></p>
+</footer>
 <script>
   // Chave publicavel do Supabase: feita para ir no cliente. A seguranca vem das
   // regras da tabela (RLS): so permite INSERT, nunca ler nem alterar emails.
