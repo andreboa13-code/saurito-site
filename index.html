@@ -62,6 +62,19 @@
   .passos h3 { font-size: 1.2rem; font-weight: 800; margin: 0 0 6px; }
   .passos p { margin: 0; color: var(--suave); }
 
+
+  /* Capturas reais da app */
+  .jogo { background: var(--branco); }
+  .capturas { list-style: none; padding: 0; margin: 0; display: grid; gap: 22px; grid-template-columns: repeat(3, 1fr); }
+  .capturas figure { margin: 0; text-align: center; }
+  .capturas img { display: block; width: 100%; height: auto; border-radius: 22px; box-shadow: 0 10px 30px rgba(30,42,30,.14); }
+  .capturas figcaption { margin-top: 14px; font-weight: 700; }
+  @media (max-width: 720px) {
+    /* No telemóvel passam a uma fila que se desliza para o lado */
+    .capturas { grid-template-columns: none; grid-auto-flow: column; grid-auto-columns: 72%; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 20px 12px; margin: 0 -20px; }
+    .capturas li { scroll-snap-align: center; }
+  }
+
   /* Promessas: o que o Saurito nunca faz */
   .promessas { background: var(--parede); }
   .lista-promessas { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
@@ -122,6 +135,18 @@
           <p>Escreve um recado curto num sítio por onde passas. Quem passar lá depois encontra-o.</p>
         </li>
       </ol>
+    </div>
+  </section>
+
+  <section class="bloco jogo" aria-labelledby="jg-t">
+    <div class="contentor">
+      <h2 id="jg-t">Uma vida inteira no teu bolso</h2>
+      <p class="intro">Capturas reais da app.</p>
+      <ul class="capturas">
+        <li><figure><img src="/img/app/cria-noite.webp" width="640" height="799" loading="lazy" alt="Um Saurito azul acabado de nascer, de t-shirt, num caminho à noite, a dizer: Nham. Obrigado, mosca." /><figcaption>Nasce pequeno e com fome</figcaption></figure></li>
+        <li><figure><img src="/img/app/robert-rio.webp" width="640" height="800" loading="lazy" alt="O Robert, um Saurito amarelo com cabelo encaracolado, óculos de sol e camisola de Portugal, numa praia do Rio de Janeiro." /><figcaption>Veste o que conquistas</figcaption></figure></li>
+        <li><figure><img src="/img/app/romario-egito.webp" width="640" height="801" loading="lazy" alt="O Romário, um Saurito vermelho de fato e gravata, em frente às pirâmides do Egito." /><figcaption>Viaja do Rio ao Egito</figcaption></figure></li>
+      </ul>
     </div>
   </section>
 
