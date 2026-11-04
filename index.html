@@ -7,7 +7,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="/icon-512.png" />
 <title>Saurito: um bichinho que cresce com os teus passos</title>
-<meta name="description" content="O Saurito nasce de um ovo e só cresce quando andas. Passos reais, sem contas, sem anúncios e sem ranking. Em teste no Android." />
+<meta name="description" content="O Saurito nasce de um ovo e só cresce quando andas. Passos reais, sem contas, sem anúncios e sem ranking. Grátis no Google Play." />
 <meta property="og:title" content="Saurito" />
 <meta property="og:description" content="Um bichinho que nasce de um ovo e só cresce quando andas." />
 <meta property="og:type" content="website" />
@@ -105,10 +105,10 @@
     <h1>Um bichinho que só cresce quando andas</h1>
     <p class="sub">O Saurito nasce de um ovo e cresce com os teus passos reais. Envelhece contigo, veste o que conquistas e um dia deixa um ovo de herança.</p>
     <div class="acoes">
-      <a class="btn btn-principal" href="/testar/">Testar no Android</a>
-      <a class="btn btn-secundario" href="#aviso">Avisem-me quando sair</a>
+      <a class="btn btn-principal" href="https://play.google.com/store/apps/details?id=com.andreconnan.passos" rel="noopener">Instalar no Google Play</a>
+      <a class="btn btn-secundario" href="#como-funciona">Como funciona</a>
     </div>
-    <p class="estado">Em teste na Play Store, em Portugal e no Brasil</p>
+    <p class="estado">Grátis e sem anúncios, em Portugal e no Brasil</p>
   </div>
   <figure class="multidao">
     <img src="/img/multidao.webp" width="1920" height="855" fetchpriority="high"
@@ -168,8 +168,8 @@
 
   <section class="bloco aviso" id="aviso" aria-labelledby="av-t">
     <div class="contentor">
-      <h2 id="av-t">Não tens Android, ou preferes esperar?</h2>
-      <p class="intro">Deixa o teu email e avisamos-te uma única vez, quando o Saurito chegar à loja.</p>
+      <h2 id="av-t">Tens iPhone?</h2>
+      <p class="intro">Por agora o Saurito é só para Android. Deixa o teu email e avisamos-te uma única vez, se chegar ao iPhone.</p>
       <form id="form" novalidate>
         <label for="email" class="so-leitores">O teu email</label>
         <input id="email" type="email" name="email" placeholder="o.teu@email.pt" autocomplete="email" required />
@@ -213,7 +213,7 @@
       headers: { 'Content-Type': 'application/json', apikey: CHAVE, Authorization: 'Bearer ' + CHAVE, Prefer: 'return=minimal' },
       body: JSON.stringify({ email: email })
     }).then(function (r) {
-      if (r.ok || r.status === 409) { form.reset(); dizer(r.ok ? 'Feito! Avisamos-te quando chegar. 🦎' : 'Já estás na lista. 🦎', false); }
+      if (r.ok || r.status === 409) { form.reset(); dizer(r.ok ? 'Feito! Se chegar ao iPhone, avisamos-te. 🦎' : 'Já estás na lista. 🦎', false); }
       else { dizer('Não deu para guardar agora. Tenta daqui a um bocado.', true); }
     }).catch(function () {
       dizer('Sem ligação. Tenta daqui a um bocado.', true);
