@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="canonical" href="https://saurito.com/marcos/" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/icon-512.png" />
+<title>Marcos do Saurito: Torre de Belém, Aquário de Santos, Catedral de Sorocaba e mais</title>
+<meta name="description" content="24 lugares reais de Portugal e do Brasil em papel recortado. Vai lá a pé com o Saurito e o cenário fica teu para sempre. Grátis no Google Play." />
+<meta property="og:title" content="Marcos do Saurito" />
+<meta property="og:description" content="Lugares reais em papel recortado. Vai lá a pé e o cenário fica teu." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://saurito.com/marcos/" />
+<meta property="og:image" content="https://saurito.com/img/marcos/og-marcos.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "ItemList",
+ "name": "Marcos do Saurito",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Ponte Pênsil"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Museu do Café"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Aquário de Santos"
+  },
+  {
+   "@type": "ListItem",
+   "position": 4,
+   "name": "Catedral de Sorocaba"
+  },
+  {
+   "@type": "ListItem",
+   "position": 5,
+   "name": "Torre dos Clérigos"
+  },
+  {
+   "@type": "ListItem",
+   "position": 6,
+   "name": "Ponte D. Luís I"
+  },
+  {
+   "@type": "ListItem",
+   "position": 7,
+   "name": "Bom Jesus do Monte"
+  },
+  {
+   "@type": "ListItem",
+   "position": 8,
+   "name": "Castelo de Guimarães"
+  },
+  {
+   "@type": "ListItem",
+   "position": 9,
+   "name": "Praia do Reconquinho"
+  },
+  {
+   "@type": "ListItem",
+   "position": 10,
+   "name": "Aldeia do Piódão"
+  },
+  {
+   "@type": "ListItem",
+   "position": 11,
+   "name": "Convento de Cristo"
+  },
+  {
+   "@type": "ListItem",
+   "position": 12,
+   "name": "Torre da Serra da Estrela"
+  },
+  {
+   "@type": "ListItem",
+   "position": 13,
+   "name": "Torre de Belém"
+  },
+  {
+   "@type": "ListItem",
+   "position": 14,
+   "name": "Cais das Colunas"
+  },
+  {
+   "@type": "ListItem",
+   "position": 15,
+   "name": "Palácio da Pena"
+  },
+  {
+   "@type": "ListItem",
+   "position": 16,
+   "name": "Cristo Rei"
+  },
+  {
+   "@type": "ListItem",
+   "position": 17,
+   "name": "Cromeleque dos Almendres"
+  },
+  {
+   "@type": "ListItem",
+   "position": 18,
+   "name": "Castelo de Marvão"
+  },
+  {
+   "@type": "ListItem",
+   "position": 19,
+   "name": "Praia da Marinha"
+  },
+  {
+   "@type": "ListItem",
+   "position": 20,
+   "name": "Ponta da Piedade"
+  },
+  {
+   "@type": "ListItem",
+   "position": 21,
+   "name": "Montanha do Pico"
+  },
+  {
+   "@type": "ListItem",
+   "position": 22,
+   "name": "Lagoa das Sete Cidades"
+  },
+  {
+   "@type": "ListItem",
+   "position": 23,
+   "name": "Ponta de São Lourenço"
+  },
+  {
+   "@type": "ListItem",
+   "position": 24,
+   "name": "Cabo Girão"
+  }
+ ]
+}
+</script>
+<link rel="preload" href="/fontes/nunito-latin.woff2" as="font" type="font/woff2" crossorigin />
+<link rel="stylesheet" href="/estilo.css" />
+<style>
+  .topo { background: var(--parede); text-align: center; padding: 8px 0 48px; }
+  .topo h1 { font-size: clamp(2rem, 5.5vw, 3rem); font-weight: 900; margin: 28px auto 12px; max-width: 15em; }
+  .topo .sub { font-size: 1.15rem; color: var(--suave); margin: 0 auto 26px; max-width: 32em; }
+  .acoes { display: flex; flex-wrap: wrap; gap: 10px 16px; justify-content: center; align-items: center; }
+  .selo-play { display: inline-block; line-height: 0; transition: transform .15s; }
+  .selo-play:hover { transform: translateY(-2px); }
+  .selo-play img { height: 62px; width: auto; }
+
+  .como { list-style: none; padding: 0; margin: 36px auto 0; max-width: 760px; display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: left; }
+  .como li { background: rgba(255,255,255,.7); border-radius: var(--raio); padding: 16px 18px; }
+  .como b { display: block; font-weight: 800; }
+  .como span { color: var(--suave); font-size: .97rem; }
+
+  section.pais { padding: 56px 0 24px; }
+  .pais h2 { font-size: clamp(1.6rem, 3.5vw, 2.1rem); font-weight: 900; text-align: center; margin: 0 0 6px; }
+  .pais .intro { text-align: center; color: var(--suave); max-width: 34em; margin: 0 auto 12px; }
+  .regiao { font-size: 1.25rem; font-weight: 800; margin: 36px 0 14px; padding-bottom: 6px; border-bottom: 2px solid var(--borda); }
+  .marcos { list-style: none; padding: 0; margin: 0; display: grid; gap: 22px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+  .marco { background: var(--branco); border: 1px solid var(--borda); border-radius: var(--raio); overflow: hidden; display: flex; flex-direction: column; }
+  .marco img { display: block; width: 100%; height: auto; aspect-ratio: 720 / 631; object-fit: cover; }
+  .marco .txt { padding: 14px 18px 18px; display: flex; flex-direction: column; flex: 1; }
+  .marco h4 { font-size: 1.15rem; font-weight: 800; margin: 0; }
+  .marco .cidade { margin: 0 0 6px; color: var(--suave); font-weight: 700; font-size: .92rem; }
+  .marco p { margin: 0 0 12px; }
+  .ver-mapa { margin-top: auto; font-weight: 700; font-size: .95rem; }
+  .final { text-align: center; padding: 56px 0 64px; background: var(--parede); margin-top: 48px; }
+  .final h2 { font-size: clamp(1.5rem, 3.2vw, 2rem); font-weight: 900; margin: 0 0 10px; }
+  .final p { color: var(--suave); margin: 0 auto 22px; max-width: 30em; }
+</style>
+</head>
+<body>
+<header class="topo">
+  <div class="barra">
+    <a class="logo" href="/" aria-label="Saurito, página inicial"><img src="/img/saurito-logo.svg" width="545" height="146" alt="Saurito" /></a>
+    <nav><a href="#brasil">Brasil</a> &middot; <a href="#portugal">Portugal</a></nav>
+  </div>
+  <div class="contentor">
+    <h1>Lugares reais, em papel recortado</h1>
+    <p class="sub">No Saurito há 24 marcos de Portugal e do Brasil. Cada um tem um cenário feito à mão, com as medidas verdadeiras. Não se compra: só o ganhas se fores lá a pé.</p>
+    <div class="acoes">
+      <a class="selo-play" href="https://play.google.com/store/apps/details?id=com.andreconnan.passos&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dmarcos" rel="noopener"><img src="/img/google-play-pt.png" width="478" height="142" alt="Obter no Google Play" /></a>
+    </div>
+    <ul class="como">
+      <li><b>1. Instala o Saurito</b><span>Grátis, sem conta e sem anúncios.</span></li>
+      <li><b>2. Vai até ao marco</b><span>A pé, com o telemóvel. Quando lá chegares, abre o Saurito.</span></li>
+      <li><b>3. O cenário fica teu</b><span>Fica na tua coleção para sempre.</span></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="pais" id="brasil" aria-labelledby="br-t">
+    <div class="contentor">
+      <h2 id="br-t">Brasil</h2>
+      <p class="intro">Começamos pela Baixada Santista e por Sorocaba. Vêm aí mais.</p>
+      <h3 class="regiao">São Paulo</h3>
+      <ul class="marcos">
+        <li class="marco">
+          <img src="/img/marcos/ponte-pensil.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Ponte Pênsil, São Vicente." />
+          <div class="txt">
+            <h4>Ponte Pênsil</h4>
+            <p class="cidade">São Vicente</p>
+            <p>A ponte suspensa de 1914 que liga São Vicente ao continente.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=-23.9752%2C-46.3888" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+        <li class="marco">
+          <img src="/img/marcos/museu-cafe.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Museu do Café, Santos." />
+          <div class="txt">
+            <h4>Museu do Café</h4>
+            <p class="cidade">Santos</p>
+            <p>A antiga Bolsa Oficial de Café, no centro histórico de Santos.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=-23.93258%2C-46.33024" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+        <li class="marco">
+          <img src="/img/marcos/aquario-santos.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Aquário de Santos, Santos." />
+          <div class="txt">
+            <h4>Aquário de Santos</h4>
+            <p class="cidade">Santos</p>
+            <p>O aquário da Ponta da Praia, com o mural do golfinho.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=-23.98615%2C-46.30814" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+        <li class="marco">
+          <img src="/img/marcos/catedral-sorocaba.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Catedral de Sorocaba, Sorocaba." />
+          <div class="txt">
+            <h4>Catedral de Sorocaba</h4>
+            <p class="cidade">Sorocaba</p>
+            <p>A Catedral Metropolitana, na Praça Coronel Fernando Prestes.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=-23.50028%2C-47.45861" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="pais" id="portugal" aria-labelledby="pt-t">
+    <div class="contentor">
+      <h2 id="pt-t">Portugal</h2>
+      <p class="intro">Do Minho à Madeira, passando pelos Açores.</p>
+      <h3 class="regiao">Norte</h3>
+      <ul class="marcos">
+        <li class="marco">
+          <img src="/img/marcos/clerigos.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Torre dos Clérigos, Porto." />
+          <div class="txt">
+            <h4>Torre dos Clérigos</h4>
+            <p class="cidade">Porto</p>
+            <p>A torre barroca que se vê de quase todo o Porto.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=Torre+dos+Cl%C3%A9rigos%2C+Porto" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+        <li class="marco">
+          <img src="/img/marcos/ponte-luis.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Ponte D. Luís I, Porto." />
+          <div class="txt">
+            <h4>Ponte D. Luís I</h4>
+            <p class="cidade">Porto</p>
+            <p>O arco de ferro entre o Porto e Gaia, com o Douro por baixo.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=Ponte+Lu%C3%ADs+I%2C+Porto" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+        <li class="marco">
+          <img src="/img/marcos/bom-jesus.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Bom Jesus do Monte, Braga." />
+          <div class="txt">
+            <h4>Bom Jesus do Monte</h4>
+            <p class="cidade">Braga</p>
+            <p>O escadório em ziguezague na encosta de Braga.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=Bom+Jesus+do+Monte%2C+Braga" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+        <li class="marco">
+          <img src="/img/marcos/guimaraes.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Castelo de Guimarães, Guimarães." />
+          <div class="txt">
+            <h4>Castelo de Guimarães</h4>
+            <p class="cidade">Guimarães</p>
+            <p>O castelo onde Portugal começou.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=Castelo+de+Guimar%C3%A3es" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+      </ul>
+      <h3 class="regiao">Centro</h3>
+      <ul class="marcos">
+        <li class="marco">
+          <img src="/img/marcos/reconquinho.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Praia do Reconquinho, Penacova." />
+          <div class="txt">
+            <h4>Praia do Reconquinho</h4>
+            <p class="cidade">Penacova</p>
+            <p>A praia fluvial do Mondego onde o Saurito nasceu.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=Praia+Fluvial+do+Reconquinho%2C+Penacova" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+        <li class="marco">
+          <img src="/img/marcos/piodao.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Aldeia do Piódão, Arganil." />
+          <div class="txt">
+            <h4>Aldeia do Piódão</h4>
+            <p class="cidade">Arganil</p>
+            <p>A aldeia de xisto pendurada na Serra do Açor.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=Pi%C3%B3d%C3%A3o" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+        <li class="marco">
+          <img src="/img/marcos/convento-cristo.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Convento de Cristo, Tomar." />
+          <div class="txt">
+            <h4>Convento de Cristo</h4>
+            <p class="cidade">Tomar</p>
+            <p>A casa dos Templários, com a famosa janela manuelina.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=Convento+de+Cristo%2C+Tomar" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+        <li class="marco">
+          <img src="/img/marcos/estrela.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Torre da Serra da Estrela, Serra da Estrela." />
+          <div class="txt">
+            <h4>Torre da Serra da Estrela</h4>
+            <p class="cidade">Serra da Estrela</p>
+            <p>O ponto mais alto de Portugal continental.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=Torre%2C+Serra+da+Estrela" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+      </ul>
+      <h3 class="regiao">Lisboa e arredores</h3>
+      <ul class="marcos">
+        <li class="marco">
+          <img src="/img/marcos/belem.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Torre de Belém, Lisboa." />
+          <div class="txt">
+            <h4>Torre de Belém</h4>
+            <p class="cidade">Lisboa</p>
+            <p>A torre manuelina à beira do Tejo.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=Torre+de+Bel%C3%A9m%2C+Lisboa" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+        <li class="marco">
+          <img src="/img/marcos/cais-colunas.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Cais das Colunas, Lisboa." />
+          <div class="txt">
+            <h4>Cais das Colunas</h4>
+            <p class="cidade">Lisboa</p>
+            <p>As duas colunas da Praça do Comércio, com o Tejo à frente.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=Cais+das+Colunas%2C+Lisboa" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+        <li class="marco">
+          <img src="/img/marcos/pena.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Palácio da Pena, Sintra." />
+          <div class="txt">
+            <h4>Palácio da Pena</h4>
+            <p class="cidade">Sintra</p>
+            <p>O palácio colorido no alto da Serra de Sintra.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=Pal%C3%A1cio+da+Pena%2C+Sintra" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+        <li class="marco">
+          <img src="/img/marcos/cristo-rei.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Cristo Rei, Almada." />
+          <div class="txt">
+            <h4>Cristo Rei</h4>
+            <p class="cidade">Almada</p>
+            <p>De braços abertos sobre o Tejo e a Ponte 25 de Abril.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=Santu%C3%A1rio+de+Cristo+Rei%2C+Almada" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+      </ul>
+      <h3 class="regiao">Alentejo</h3>
+      <ul class="marcos">
+        <li class="marco">
+          <img src="/img/marcos/cromeleque.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Cromeleque dos Almendres, Évora." />
+          <div class="txt">
+            <h4>Cromeleque dos Almendres</h4>
+            <p class="cidade">Évora</p>
+            <p>Um círculo de pedras mais antigo do que Stonehenge.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=Cromeleque+dos+Almendres" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+        <li class="marco">
+          <img src="/img/marcos/marvao.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Castelo de Marvão, Marvão." />
+          <div class="txt">
+            <h4>Castelo de Marvão</h4>
+            <p class="cidade">Marvão</p>
+            <p>A vila muralhada no alto da Serra de São Mamede.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=Castelo+de+Marv%C3%A3o" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+      </ul>
+      <h3 class="regiao">Algarve</h3>
+      <ul class="marcos">
+        <li class="marco">
+          <img src="/img/marcos/marinha.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Praia da Marinha, Lagoa." />
+          <div class="txt">
+            <h4>Praia da Marinha</h4>
+            <p class="cidade">Lagoa</p>
+            <p>Falésias douradas e água transparente.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=Praia+da+Marinha%2C+Lagoa" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+        <li class="marco">
+          <img src="/img/marcos/piedade.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Ponta da Piedade, Lagos." />
+          <div class="txt">
+            <h4>Ponta da Piedade</h4>
+            <p class="cidade">Lagos</p>
+            <p>Rochas e grutas à entrada de Lagos, vistas de perto da água.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=Ponta+da+Piedade%2C+Lagos" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+      </ul>
+      <h3 class="regiao">Açores</h3>
+      <ul class="marcos">
+        <li class="marco">
+          <img src="/img/marcos/pico.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Montanha do Pico, Ilha do Pico." />
+          <div class="txt">
+            <h4>Montanha do Pico</h4>
+            <p class="cidade">Ilha do Pico</p>
+            <p>A montanha mais alta de Portugal, vista das vinhas.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=Montanha+do+Pico%2C+A%C3%A7ores" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+        <li class="marco">
+          <img src="/img/marcos/sete-cidades.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Lagoa das Sete Cidades, São Miguel." />
+          <div class="txt">
+            <h4>Lagoa das Sete Cidades</h4>
+            <p class="cidade">São Miguel</p>
+            <p>A lagoa azul e a lagoa verde, separadas por uma ponte.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=Lagoa+das+Sete+Cidades" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+      </ul>
+      <h3 class="regiao">Madeira</h3>
+      <ul class="marcos">
+        <li class="marco">
+          <img src="/img/marcos/lourenco.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Ponta de São Lourenço, Madeira." />
+          <div class="txt">
+            <h4>Ponta de São Lourenço</h4>
+            <p class="cidade">Madeira</p>
+            <p>A ponta leste da Madeira, quase sem árvores e cheia de cor.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=Ponta+de+S%C3%A3o+Louren%C3%A7o%2C+Madeira" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+        <li class="marco">
+          <img src="/img/marcos/girao.webp" width="720" height="631" loading="lazy" alt="Cenário de papel recortado do Saurito: Cabo Girão, Câmara de Lobos." />
+          <div class="txt">
+            <h4>Cabo Girão</h4>
+            <p class="cidade">Câmara de Lobos</p>
+            <p>Uma das falésias mais altas da Europa, vista do porto de Câmara de Lobos.</p>
+            <a class="ver-mapa" href="https://www.google.com/maps/search/?api=1&query=Cabo+Gir%C3%A3o" target="_blank" rel="noopener">Ver no mapa</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="final" aria-labelledby="fi-t">
+    <div class="contentor">
+      <h2 id="fi-t">Qual vais visitar primeiro?</h2>
+      <p>O Saurito cresce com os teus passos reais. Os marcos são uma razão para dar mais alguns.</p>
+      <a class="selo-play" href="https://play.google.com/store/apps/details?id=com.andreconnan.passos&amp;referrer=utm_source%3Dsite%26utm_campaign%3Dmarcos" rel="noopener"><img src="/img/google-play-pt.png" width="478" height="142" alt="Obter no Google Play" /></a>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <ul class="redes">
+    <li><a href="https://www.instagram.com/saurito.app" target="_blank" rel="noopener" aria-label="Saurito no Instagram"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg></a></li>
+    <li><a href="https://www.tiktok.com/@saurito.app" target="_blank" rel="noopener" aria-label="Saurito no TikTok"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a></li>
+    <li><a href="https://x.com/sauritoapp" target="_blank" rel="noopener" aria-label="Saurito no X"><svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a></li>
+  </ul>
+  <p>Feito em Portugal por uma pessoa.</p>
+  <p><a href="/privacidade/">Privacidade</a> &middot; <a href="mailto:ola@saurito.com">ola@saurito.com</a></p>
+</footer>
+</body>
+</html>
