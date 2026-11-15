@@ -4,20 +4,20 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="canonical" href="https://saurito.com/" />
-<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-<link rel="apple-touch-icon" href="/icon-512.png" />
+<link rel="icon" href="/favicon.png" type="image/png" sizes="48x48" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <title>Saurito: um bichinho que cresce com os teus passos</title>
 <meta name="description" content="O Saurito nasce de um ovo e só cresce quando andas. Passos reais, sem contas, sem anúncios e sem ranking. Grátis no Google Play." />
 <meta property="og:title" content="Saurito" />
 <meta property="og:description" content="Um bichinho que nasce de um ovo e só cresce quando andas." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://saurito.com/" />
-<meta property="og:image" content="https://saurito.com/og.png" />
+<meta property="og:image" content="https://saurito.com/og.jpg" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="Saurito, um bichinho verde que cresce com os teus passos" />
+<meta property="og:image:alt" content="Sauritos de peluche das oito raças num prado de feltro, com o texto: Um bichinho que só cresce quando andas." />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:image" content="https://saurito.com/og.png" />
+<meta name="twitter:image" content="https://saurito.com/og.jpg" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -42,9 +42,19 @@
   .acoes { display: flex; flex-wrap: wrap; gap: 10px 16px; justify-content: center; align-items: center; }
   .estado { display: inline-block; margin: 18px 0 0; font-size: .9rem; font-weight: 700; color: var(--suave); }
   .estado::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--destaque); margin-right: 8px; vertical-align: 2px; }
-  .multidao { margin: 36px 0 0; background: var(--noite); border-top: 10px solid var(--rodape); }
-  .multidao img { display: block; width: 100%; max-width: 1600px; height: auto; margin: 0 auto; }
-  @media (max-width: 640px) { .multidao img { height: 300px; object-fit: cover; object-position: 50% 75%; } }
+  /* Multidao de peluche: imagem a toda a largura; no telemovel ha um recorte proprio (4 + 4 racas, maiores) */
+  .multidao { position: relative; margin: 36px 0 0; background: #E9B98A; }
+  .multidao img { display: block; width: 100%; height: auto; }
+  /* costura de feltro a separar o topo da imagem */
+  .multidao::before {
+    content: ""; position: absolute; left: 0; right: 0; top: 0; height: 14px; z-index: 1;
+    background: var(--destaque);
+    box-shadow: 0 3px 6px rgba(30,42,30,.25);
+  }
+  .multidao::after {
+    content: ""; position: absolute; left: 0; right: 0; top: 5px; z-index: 2;
+    border-top: 3px dashed rgba(255,248,230,.85);
+  }
 
   /* Secções */
   section.bloco { padding: 64px 0; }
@@ -111,11 +121,15 @@
       <a class="selo-play" href="https://play.google.com/store/apps/details?id=com.andreconnan.passos" rel="noopener"><img src="/img/google-play-pt.png" width="478" height="142" alt="Obter no Google Play" /></a>
       <a class="btn btn-secundario" href="#como-funciona">Como funciona</a>
     </div>
-    <p class="estado">Grátis e sem anúncios, em Portugal e no Brasil</p>
+    <p class="estado">Já no Google Play. Instala grátis.</p>
   </div>
   <figure class="multidao">
-    <img src="/img/multidao.webp" width="1920" height="855" fetchpriority="high"
-         alt="Dezenas de Sauritos, lagartos de cores diferentes, com chapéus, óculos, casacos, vestidos e fatos, todos de pé numa planície azul." />
+    <picture>
+      <source media="(max-width: 640px)" srcset="/img/multidao-telemovel-720.webp 720w, /img/multidao-telemovel.webp 1080w" sizes="100vw" width="1080" height="1000" />
+      <img src="/img/multidao-1920.webp" srcset="/img/multidao-1280.webp 1280w, /img/multidao-1920.webp 1920w" sizes="100vw"
+           width="1920" height="900" fetchpriority="high"
+           alt="Dezenas de Sauritos de peluche, das oito raças, com roupas, chapéus e óculos do jogo, num prado de feltro ao pôr do sol, com uma aldeia e um farol ao fundo." />
+    </picture>
   </figure>
 </header>
 
@@ -146,12 +160,12 @@
       <h2 id="jg-t">Uma vida inteira no teu bolso</h2>
       <p class="intro">Capturas reais da app.</p>
       <ul class="capturas">
-        <li><figure><img src="/img/app/ovo-ninho.webp" width="640" height="800" loading="lazy" alt="Um ovo rachado num ninho, à noite, a 76% de chocar." /><figcaption>Anda, e o ovo choca</figcaption></figure></li>
-        <li><figure><img src="/img/app/zec-armario.webp" width="640" height="800" loading="lazy" alt="O Zéc, um Saurito vermelho já crescido, em frente ao armário aberto." /><figcaption>Cresce a cada passo</figcaption></figure></li>
-        <li><figure><img src="/img/app/cria-noite.webp" width="640" height="799" loading="lazy" alt="Um Saurito azul acabado de nascer, de t-shirt, num caminho à noite, a dizer: Nham. Obrigado, mosca." /><figcaption>Nasce pequeno e com fome</figcaption></figure></li>
-        <li><figure><img src="/img/app/zec-campo.webp" width="640" height="800" loading="lazy" alt="O Zéc, um Saurito vermelho de gorro, óculos azuis, camisola e ténis, num campo com uma árvore e uma casa." /><figcaption>Veste o que conquistas</figcaption></figure></li>
-        <li><figure><img src="/img/app/robert-rio.webp" width="640" height="800" loading="lazy" alt="O Robert, um Saurito amarelo com cabelo encaracolado, óculos de sol e camisola de Portugal, numa praia do Rio de Janeiro." /><figcaption>Escolhe o cenário, do Rio a Lisboa</figcaption></figure></li>
-        <li><figure><img src="/img/app/rua-lojas.webp" width="640" height="800" loading="lazy" alt="A Rua das lojas da app, com quatro marcas: Zigando, Maison Escama, Streettail e Rastopata." /><figcaption>Gasta moscas na Rua das lojas</figcaption></figure></li>
+        <li><figure><img src="/img/app/ovo-ninho.webp" width="640" height="800" loading="lazy" alt="Um ovo de feltro rosa com pintas, num ninho de palha, num prado com flores, quase a chocar." /><figcaption>Anda, e o ovo choca</figcaption></figure></li>
+        <li><figure><img src="/img/app/escama-sala.webp" width="640" height="800" loading="lazy" alt="Um Saurito de peluche branco, de óculos escuros, chapéu e casaco preto da Maison Escama, numa sala moderna." /><figcaption>Veste o que conquistas</figcaption></figure></li>
+        <li><figure><img src="/img/app/casa-luxo.webp" width="640" height="800" loading="lazy" alt="Um Saurito de peluche de camisola azul numa casa rica, com um balão a dizer: Que luxo! Nem acredito." /><figcaption>Dá-lhe uma casa, e ele repara</figcaption></figure></li>
+        <li><figure><img src="/img/app/raspadinha.webp" width="640" height="800" loading="lazy" alt="A Raspadinha do dia, um cartão de feltro com três casinhas: moscas douradas, um fragmento Plus e moscas pretas." /><figcaption>Uma raspadinha por dia, a andar</figcaption></figure></li>
+        <li><figure><img src="/img/app/porto.webp" width="640" height="800" loading="lazy" alt="Um Saurito de peluche de camisola azul e óculos verdes, junto à Ponte D. Luís I, no Porto." /><figcaption>Visita monumentos reais</figcaption></figure></li>
+        <li><figure><img src="/img/app/museu.webp" width="640" height="800" loading="lazy" alt="O Museu da app: a Matilde, uma salamandra velhinha de vestido amarelo, num pedestal iluminado." /><figcaption>E fica para sempre no teu Museu</figcaption></figure></li>
       </ul>
     </div>
   </section>
