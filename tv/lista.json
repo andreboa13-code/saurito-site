@@ -1,8 +1,7 @@
 {
   "videos": [
-    {"id": "grande-roubo-de-mosca", "titulo": {"pt-PT": "O Grande Roubo de Mosca", "pt-BR": "O Grande Roubo de Mosca", "en": "Grand Theft Fly"}, "video": "grande-roubo-de-mosca.mp4", "capa": "grande-roubo-de-mosca.jpg"},
     {"id": "rock-dos-rastros", "titulo": {"pt-PT": "Rock dos Rastos", "pt-BR": "Rock dos Rastros", "en": "Trail Rock"}, "video": "rock-dos-rastros.mp4", "capa": "rock-dos-rastros.jpg"},
-    {"id": "saurito-ganhou-vida", "titulo": {"pt-PT": "O Saurito ganhou vida", "pt-BR": "O Saurito ganhou vida", "en": "Saurito came to life"}, "video": "saurito-ganhou-vida.mp4", "capa": "saurito-ganhou-vida.jpg"},
-    {"id": "primeiros-minutos", "titulo": {"pt-PT": "Como nascem os Sauritos", "pt-BR": "Como nascem os Sauritos", "en": "How Sauritos are born"}, "video": "primeiros-minutos.mp4", "capa": "primeiros-minutos.jpg"}
+    {"id": "grande-roubo-de-mosca", "titulo": {"pt-PT": "O Grande Roubo de Mosca", "pt-BR": "O Grande Roubo de Mosca", "en": "Grand Theft Fly"}, "video": "grande-roubo-de-mosca.mp4", "capa": "grande-roubo-de-mosca.jpg"},
+    {"id": "drip-do-saurito", "titulo": {"pt-PT": "Drip do Saurito", "pt-BR": "Drip do Saurito", "en": "Saurito's Drip"}, "video": "drip-do-saurito.mp4", "capa": "drip-do-saurito.jpg"}
   ]
 }
