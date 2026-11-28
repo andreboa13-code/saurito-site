@@ -6,6 +6,7 @@ A app lê `https://saurito.com/tv/lista.json` sempre que alguém abre a TV. Para
 1. Comprimir o vídeo vertical para 540x960 (fica 1-13 MB):
    `ffmpeg -i ORIGINAL.mp4 -vf "scale=540:960,fps=30" -c:v libx264 -profile:v main -preset slow -crf 27 -maxrate 1400k -bufsize 2800k -pix_fmt yuv420p -c:a aac -b:a 96k -movflags +faststart tv/NOME.mp4`
 2. Capa: `ffmpeg -ss 3 -i ORIGINAL.mp4 -frames:v 1 -vf scale=270:480 -q:v 5 tv/NOME.jpg`
+2b. **Ao trocar um vídeo, usar SEMPRE um nome novo** (ex. `-v2`, `-v3`): a app guarda os vídeos no telemóvel pelo endereço e continuaria a mostrar a versão antiga.
 3. Acrescentar uma linha em `lista.json` (a ordem da lista é a ordem na TV; o primeiro é o que toca ao abrir).
 4. Juntar no `main`. O GitHub Pages publica em ~1 minuto.
 
